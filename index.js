@@ -1,16 +1,21 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
-// Cho phép server đọc JSON từ client
+// Middleware
 app.use(express.json());
+app.use(cors()); // cho phép frontend gọi API
 
-// Route test
+// Import routes
+app.use("/api", require("./src/routes"));
+
+// Test route
 app.get("/", (req, res) => {
-  res.send("Backend NodeJS is running...");
+  res.send("Funny App Backend is running...");
 });
 
-// Khởi động server
-const PORT = 3000;
+// Port
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

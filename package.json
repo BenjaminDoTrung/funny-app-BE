@@ -1,12 +1,13 @@
 {
   "name": "funny-app-be",
   "version": "1.0.0",
-  "description": "",
+  "description": "Funny App Backend",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "npx nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,12 +16,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/BenjaminDoTrung/funny-app-BE/issues"
   },
   "homepage": "https://github.com/BenjaminDoTrung/funny-app-BE#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   },
   "devDependencies": {

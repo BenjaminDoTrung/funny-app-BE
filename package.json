@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Funny App Backend",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "npx nodemon index.js",
@@ -22,9 +22,10 @@
   "homepage": "https://github.com/BenjaminDoTrung/funny-app-BE#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongodb": "^7.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.14"
   }
 }

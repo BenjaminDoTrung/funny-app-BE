@@ -1,4 +1,5 @@
-const express = require("express");
+import express from "express";
+
 const router = express.Router();
 
 // Route test
@@ -8,4 +9,6 @@ router.get("/hello", (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;
+//pass: x2NDfYPm5mOREBaC
+//userName: trung96ecvn_db_user

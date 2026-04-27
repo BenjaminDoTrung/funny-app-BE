@@ -3,6 +3,7 @@ import cors from "cors";
 const app = express();
 import {CONNECT_DB, GET_DB} from './src/config/mongodb.js'
 import routes from "./src/routes/index.js";
+import {env} from "./src/config/environment.js"
 
 const START_SERVER = () => {
   // Middleware
@@ -19,9 +20,8 @@ const START_SERVER = () => {
   });
 
   // Port
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log(`3. Server running at http://localhost:${PORT}`);
+  app.listen(env.APP_PORT, env.APP_HOST, () => {
+    console.log(`3. Server running at http://localhost:${env.APP_PORT}`);
   });
 }
 console.log('1. connecting to MongoDB Cloud Atlas...')

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/BenjaminDoTrung/funny-app-BE#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
     "express": "^5.1.0",
     "mongodb": "^7.2.0"
   },
